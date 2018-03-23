@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+    <package name="hellostruts" extends="struts-default">
+
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <!-- If the URL is hello.action then call the execute method of class HelloWorldAction.
+        If the result returned by the execute method is success render the hello.jsp -->
+        <!-- <action name="hello" class="com.kati.action.HelloAction" method="execute">  -->
+        <action name="hello" class="com.kati.action.Action02" method="execute">
+            <result name="success">/welcome.jsp</result>
+            <result name="error">/accessdenied.jsp</result>
+            <interceptor-ref name = "params"/>
+            <interceptor-ref name = "timer" />
+            <interceptor-ref name = "datetime" />
+        </action>
+
+    </package>
+
+</struts>
