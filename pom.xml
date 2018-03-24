@@ -17,7 +17,7 @@
 
 
     <properties>
-        <struts.version>1.5.16</struts.version>
+        <struts.version>2.5.16</struts.version>
         <mysql.connector.version>6.0.4</mysql.connector.version>
         <spring.version>4.1.6.RELEASE</spring.version>
         <webjar.bootstrap.version>3.3.6</webjar.bootstrap.version>
@@ -30,11 +30,11 @@
 
     <dependencyManagement>
         <dependencies>
-        <dependency>
-            <groupId>org.apache.struts</groupId>
-            <artifactId>struts2-core</artifactId>
-            <version>${struts.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.apache.struts</groupId>
+                <artifactId>struts2-core</artifactId>
+                <version>${struts.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>mysql</groupId>
@@ -55,6 +55,13 @@
             </dependency>
 
             <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+
+            <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>bootstrap</artifactId>
                 <version>${webjar.bootstrap.version}</version>
@@ -67,8 +74,6 @@
                 <scope>provided</scope>
             </dependency>
 
-
-
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>jstl</artifactId>
@@ -76,7 +81,7 @@
             </dependency>
 
 
-
+            <!-- logging -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -106,6 +111,8 @@
             </dependency>
 
 
+
+
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
@@ -125,40 +132,5 @@
         </dependencies>
     </dependencyManagement>
 
-
-    <dependencies>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-
-
-
-
-
-    </dependencies>
 
 </project>

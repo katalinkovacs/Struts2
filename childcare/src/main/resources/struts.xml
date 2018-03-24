@@ -9,5 +9,6 @@
     <!-- <include file="struts_03.xml"/> -->
     <!--<include file="struts_05.xml"/> -->
      <include file="strutsLogin.xml"/>
+     <include file="strutsReadData.xml"/>
 
 </struts>
