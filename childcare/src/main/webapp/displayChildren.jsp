@@ -8,8 +8,18 @@
   </head>
   <body>
 
-    <TABLE>
-        <c:forEach items="${childrenList} var="child">
+
+  <h1>Hello</h1>
+  <s:iterator value="childrenList">
+      <li>
+          <s:property value="id"/>
+          <s:property value="fullName"/>
+          <s:property value="ageMonth"/>
+      </li>
+  </s:iterator>
+
+  <%--  <TABLE>
+        <c:forEach items="${childrenList.child}" var="child">
 
             <tr>
                 <td><c:out value="${child.id}"/></td>
@@ -17,7 +27,7 @@
                 <td><c:out value="${child.ageMonth}"/></td>
             </tr>
         </c:forEach>
-    </TABLE>
+    </TABLE>--%>
   </body>
 
 </html>

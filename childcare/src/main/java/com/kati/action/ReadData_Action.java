@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ReadData_Action extends ActionSupport {
@@ -16,36 +17,55 @@ public class ReadData_Action extends ActionSupport {
     //private String fullName;
     //private String ageMonth;
 
-    ArrayList<Child> childrenList = new ArrayList<Child>();
+    List<Child> childrenList = new ArrayList<Child>();
 
 
-    public ArrayList<Child> getList() {
+    private List<String> comboMeals;
+
+    public List<String> getComboMeals() {
+        return comboMeals;
+    }
+
+    public void setComboMeals(List<String> comboMeals) {
+        this.comboMeals = comboMeals;
+    }
+
+
+
+    public List<Child> getChildrenList() {
         return childrenList;
     }
 
-    public void setList(ArrayList<Child> childrenList) {
+    public void setChildrenList(ArrayList<Child> childrenList) {
         this.childrenList = childrenList;
     }
 
 
     public String execute(){
 
-        String ret = ERROR;
+
+        comboMeals = new ArrayList<String>();
+        comboMeals.add("Snack Plate");
+        comboMeals.add("Dinner Plate");
+        comboMeals.add("Colonel Chicken Rice Combo");
+        comboMeals.add("Colonel Burger");
+        comboMeals.add("O.R. Fillet Burger");
+        comboMeals.add("Zinger Burger");
+
+
         Connection connection = null;
 
         try{
             //Class.forName("oracle.jdbc.driver.OracleDriver");
             Class.forName("com.mysql.jdbc.Driver");
-            String URL = "jdbc:mysql://localhost:3306/fullstackproject";
+            String URL = "jdbc:mysql://192.168.195.129:3306/fullstackprojectdata";
             //Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","oracle");
 
 
-            connection = DriverManager.getConnection(URL, "childcareuser", "childcareuser");
-            String sql = "SELECT * FROM child WHERE fullName = \"Sebi\"";
+            connection = DriverManager.getConnection(URL, "zoli", "Omeg@777");
+            String sql = "SELECT * FROM Child";
+
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, child.getId());
-            ps.setString(2, child.getAgeMonth());
-            ps.setString(3, child.getFullName());
             ResultSet rs = ps.executeQuery();
 
 
@@ -60,6 +80,6 @@ public class ReadData_Action extends ActionSupport {
             connection.close();
         }catch(Exception e){e.printStackTrace();}
 
-        return "success";
+        return SUCCESS;
     }
 }
