@@ -37,7 +37,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>TomcatServer</server>
-                    <path>/childcare</path>
+                    <path>/childcare-struts</path>
                 </configuration>
             </plugin>
 
