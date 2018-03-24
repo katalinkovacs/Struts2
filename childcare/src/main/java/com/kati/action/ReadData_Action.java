@@ -53,7 +53,7 @@ public class ReadData_Action extends ActionSupport {
                 Child child = new Child();
                 child.setId(rs.getInt(1));
                 child.setFullName(rs.getString(2));
-                child.setAgeMonth(rs.getString(3));
+                child.setAgeMonth(rs.getInt(3));
                 childrenList.add(child);
             }
 

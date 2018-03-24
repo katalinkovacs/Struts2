@@ -9,7 +9,9 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataConfig {  //It will create 2 beans!!!!
     //2 beans --> DriverManagerDataSource AND JdbcOperations
     // These will be added to the Application Context created by SPRING
