@@ -1,11 +1,11 @@
-package com.kati.dataobject;
+package com.kati.model;
 
 
 public class Child {
 
     private int id;
     private String fullName;
-    private String ageMonth;
+    private int ageMonth;
 
     public int getId() {
         return id;
@@ -23,11 +23,11 @@ public class Child {
         this.fullName = fullName;
     }
 
-    public String getAgeMonth() {
+    public int getAgeMonth() {
         return ageMonth;
     }
 
-    public void setAgeMonth(String ageMonth) {
+    public void setAgeMonth(int ageMonth) {
         this.ageMonth = ageMonth;
     }
 }

@@ -7,7 +7,7 @@
     <title>List of children:</title>
   </head>
   <body>
-    <s:iterator  value="list">
+    <s:iterator  value="childrenList">
         <fieldset>
             <s:property value="id"/><br/>
             <s:property value="fullName"/><br/>

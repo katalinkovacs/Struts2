@@ -1,6 +1,6 @@
 package com.kati.action;
 
-import com.kati.dataobject.Child;
+import com.kati.model.Child;
 import com.opensymphony.xwork2.ActionSupport;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -30,7 +30,7 @@ public class ReadData_Action extends ActionSupport {
 
     public String execute(){
 
-        String ret = ERROR;
+
         Connection connection = null;
 
         try{
@@ -41,11 +41,11 @@ public class ReadData_Action extends ActionSupport {
 
 
             connection = DriverManager.getConnection(URL, "childcareuser", "childcareuser");
-            String sql = "SELECT * FROM child WHERE fullName = \"Sebi\"";
+            String sql = "SELECT * FROM child";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, child.getId());
-            ps.setString(2, child.getAgeMonth());
-            ps.setString(3, child.getFullName());
+            //ps.setInt(1, child.getId());
+            //ps.setString(2, child.getAgeMonth());
+            //ps.setString(3, child.getFullName());
             ResultSet rs = ps.executeQuery();
 
 
