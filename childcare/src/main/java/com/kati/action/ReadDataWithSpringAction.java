@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Component // default spring bean name --> readDataWithSpringAction
 public class ReadDataWithSpringAction extends ActionSupport
 {
 
@@ -17,7 +17,7 @@ public class ReadDataWithSpringAction extends ActionSupport
     ChildDAOImplementation childDAOImplementation;
 
 
-
+    // property of this action class
     List<Child> childrenList = new ArrayList<Child>();
 
 

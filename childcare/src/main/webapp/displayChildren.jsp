@@ -8,6 +8,8 @@
   </head>
   <body>
 
+    <%-- This is the childrenList from Action class!!!!!!   --%>
+
   <s:iterator value="childrenList">
       <li>
           <s:property value="id"/>
