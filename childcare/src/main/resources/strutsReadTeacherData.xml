@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD
+Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+    <package name="childcare-teacher" extends="struts-default">
+
+        <!--  bean  - readTeacherDataWithSpringAction -->
+        <action name="displayTeacher" class="readTeacherDataWithSpringAction" method="execute">
+            <result name="success">/displayTeacher.jsp</result>
+        </action>
+
+
+    </package>
+
+</struts>

@@ -2,14 +2,10 @@ package com.kati.model;
 
 import java.util.List;
 
-//import javax.sql.DataSource;
+
 
 public interface ChildDAO {
 
-    //public void setDataSource(DataSource ds);
-
-    // METHOD to INSERT a record in the Child table.
-    //public void insertRecord(int id, String fullName, int ageMonth);  --> NOT A GOOD PRACTISE
 
     public void insertRecord(Child child);
 

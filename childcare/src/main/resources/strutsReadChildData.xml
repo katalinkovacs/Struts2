@@ -5,14 +5,14 @@ Struts Configuration 2.1//EN"
 
 <struts>
 
-    <package name="childcare" extends="struts-default">
+    <package name="childcare-child" extends="struts-default">
 
         <action name="readrecords" class="com.kati.action.ReadData_Action" method="execute">
             <result name="success">/displayChildren.jsp</result>
         </action>
 
         <!--  bean  - readDataWithSpringAction -->
-        <action name="displayChildren" class="readDataWithSpringAction" method="execute">
+        <action name="displayChildren" class="readChildDataWithSpringAction" method="execute">
             <result name="success">/displayChildren.jsp</result>
         </action>
 

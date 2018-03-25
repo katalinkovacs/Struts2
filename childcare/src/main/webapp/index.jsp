@@ -9,5 +9,9 @@
       <title>Hello from index</title>
    </head>
 
+   <body>
+         <h1>Hello from index</h1>
+   </body>
+
 
 </html>

@@ -5,12 +5,11 @@ import com.kati.model.ChildDAOImplementation;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@Component // default spring bean name --> readDataWithSpringAction
-public class ReadDataWithSpringAction extends ActionSupport
+@Component // default spring bean name --> readChildDataWithSpringAction
+public class ReadChildDataWithSpringAction extends ActionSupport
 {
 
     @Autowired

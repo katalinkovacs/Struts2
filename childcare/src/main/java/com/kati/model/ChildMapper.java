@@ -1,7 +1,6 @@
 package com.kati.model;
 
 import org.springframework.jdbc.core.RowMapper;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
