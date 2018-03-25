@@ -8,7 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:/application-spring-beans.xml")
+@ContextConfiguration("classpath:/applicationContext.xml")
 public class ChildModelTest {
 
 
@@ -23,7 +23,7 @@ public class ChildModelTest {
 
         Child c = new Child();
 
-        c.setId(199);
+        c.setId(299);
         c.setFullName("Sebastian");
         c.setAgeMonth(43);
 
@@ -32,11 +32,11 @@ public class ChildModelTest {
         childDAOImplementation.insertRecord(c);
 
 
-        Child c2 = childDAOImplementation.findChildById(99);
+        Child c2 = childDAOImplementation.findChildById(299);
 
         assert("Sebastian".equals(c2.getFullName()));
 
-        childDAOImplementation.deleteRecord(99);
+        childDAOImplementation.deleteRecord(299);
 
 
     }
