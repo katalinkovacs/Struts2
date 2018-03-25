@@ -21,35 +21,13 @@ public class ChildDAOImplementation implements ChildDAO{
         }
 
 
-/*      // THIS WAS USED WITH JdbcTemplate!!!!!
-        private DataSource dataSource;
-        private JdbcTemplate jdbcTemplateObject;
+        public void insertRecord(Child child) {
 
-        public void setDataSource(DataSource dataSource) {
-            //System.out.println("SetDataSource is invoked------------");
-            this.dataSource = dataSource;
-            this.jdbcTemplateObject = new JdbcTemplate(dataSource);
-        }
-*/
-
-/*        public void insertRecord(int id, String fullName, int ageMonth) {
-
-            String SQL = "insert into Child (id, fullName, ageMonth) values (id, fullName, ageMonth)";
-            //jdbcTemplateObject.update(SQL);
-            jdbcOperations.update(SQL);
-            System.out.println("Created Record ID is = " +id +" Name is: " + fullName + " Age = " + ageMonth);
+            String sql = "INSERT INTO Child (id, fullName, ageMonth) VALUES (" + child.getId() + ",     \"" + child.getFullName() + "\"," + child.getAgeMonth() + ")";
+            jdbcOperations.update(sql);
+            //System.out.println("Created Record ID is = " +child.getId() +" Name is: " + child.getFullName());
             return;
         }
-*/
-
-
-    public void insertRecord(Child child) {
-
-        String sql = "INSERT INTO Child (id, fullName, ageMonth) VALUES (" + child.getId() + ",     \"" + child.getFullName() + "\"," + child.getAgeMonth() + ")";
-        jdbcOperations.update(sql);
-        //System.out.println("Created Record ID is = " +child.getId() +" Name is: " + child.getFullName());
-        return;
-    }
 
 
         public Child findChildById(int id) {
